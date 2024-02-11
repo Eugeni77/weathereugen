@@ -81,9 +81,18 @@ $(document).ready(function () {
       });
     }
   
-    function addToHistory(cityName) {
-      const historyList = $('#history');
+   
+  function addToHistory(cityName) {
+    const historyList = $('#history');
+    const existingCities = historyList.find('.list-group-item').map(function () {
+      return $(this).text();
+    }).get();
+  
+    // Check if the city is not already in the history
+    if (!existingCities.includes(cityName)) {
       historyList.append(`<a href="#" class="list-group-item">${cityName}</a>`);
     }
-  });
-  
+  }
+   
+    }
+  );
