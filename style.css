@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
   }
   
   .container-fluid {
@@ -10,24 +9,22 @@ body {
   }
   
   .weather-header {
-    background-color: #343a40;
+    background-color: #e2e8ed;
   }
   
   .weather-header h1 {
     font-size: 2rem;
   }
   
-  #search-form {
-    margin-top: 20px;
-  }
-  
   .form-input {
-    width: 70%;
+    width: 100%; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
   }
   
   .search-button {
     background-color: #007bff;
     color: #fff;
+    height: 30px; 
   }
   
   .weather-hr {
