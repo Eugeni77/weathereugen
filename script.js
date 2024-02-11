@@ -28,7 +28,7 @@ $(document).ready(function () {
           const forecasts = data.list;
   
           displayTodayWeather(city, forecasts[0]);
-          displayForecast(forecasts.slice(1, 6));
+          displayForecast(forecasts.slice(0, 5));
         },
         error: function (error) {
           console.error('Error fetching weather data:', error);
@@ -56,4 +56,34 @@ $(document).ready(function () {
       `);
     }
   
-}
+    function displayForecast(forecasts) {
+      const forecastSection = $('#forecast');
+      forecastSection.append('<h2>5-Day Forecast</h2>');
+  
+      $.each(forecasts, function (index, forecast) {
+        const date = new Date(forecast.dt * 1000);
+        const iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
+        const temperature = forecast.main.temp;
+        const humidity = forecast.main.humidity;
+        const windSpeed = forecast.wind.speed;
+  
+        forecastSection.append(`
+          <div class="card col-md-2 m-2">
+            <div class="card-body">
+              <h5 class="card-title">${date.toLocaleDateString()}</h5>
+              <img src="${iconUrl}" alt="Weather Icon">
+              <p class="card-text">Temperature: ${temperature} K</p>
+              <p class="card-text">Humidity: ${humidity}%</p>
+              <p class="card-text">Wind Speed: ${windSpeed} m/s</p>
+            </div>
+          </div>
+        `);
+      });
+    }
+  
+    function addToHistory(cityName) {
+      const historyList = $('#history');
+      historyList.append(`<a href="#" class="list-group-item">${cityName}</a>`);
+    }
+  });
+  
