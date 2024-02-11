@@ -51,7 +51,6 @@ $(document).ready(function () {
         <p>Humidity: ${humidity}%</p>
         <p>Wind Speed: ${windSpeed} m/s</p>
         <hr>
-
       `);
     }
   
@@ -62,13 +61,16 @@ $(document).ready(function () {
         const uniqueDates = {};
         let displayedCount = 0;
       
-        // Loop through each forecast
+        // Get the current date on your laptop
+        const currentDate = new Date();
+      
+        // Start the loop from index 0 to include the current day's forecast
         for (let i = 0; i < forecasts.length; i++) {
           const forecast = forecasts[i];
-          const date = new Date(forecast.dt * 1000).toLocaleDateString();
+          const forecastDate = new Date(forecast.dt * 1000);
       
-          // Check if the date is not already added
-          if (!uniqueDates[date] && displayedCount < 6) {
+          // Check if the date is not already added and is greater than or equal to the current date
+          if (!uniqueDates[forecastDate] && forecastDate >= currentDate && displayedCount < 5) {
             const iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
             const temperature = forecast.main.temp;
             const humidity = forecast.main.humidity;
@@ -77,7 +79,7 @@ $(document).ready(function () {
             forecastSection.append(`
               <div class="card col-md-2 m-2">
                 <div class="card-body">
-                  <h5 class="card-title">${date}</h5>
+                  <h5 class="card-title">${currentDate.toLocaleString([], { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })}</h5>
                   <img src="${iconUrl}" alt="Weather Icon">
                   <p class="card-text">Temperature: ${temperature} K</p>
                   <p class="card-text">Humidity: ${humidity}%</p>
@@ -87,13 +89,13 @@ $(document).ready(function () {
             `);
       
             // Mark the date as added
-            uniqueDates[date] = true;
+            uniqueDates[forecastDate] = true;
             displayedCount++;
           }
         }
       }
       
-  
+      
     function addToHistory(cityName) {
       const historyList = $('#history');
       const existingCities = historyList.find('.list-group-item').map(function () {
