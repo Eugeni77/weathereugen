@@ -24,15 +24,16 @@ body {
   .search-button {
     background-color: #007bff;
     color: #fff;
-    height: 30px; 
+    height: 50px; 
+    border-radius: 20%;
+    padding: 10px;
   }
   
-  .weather-hr {
-    border-color: #007bff;
-  }
+  
   
   #history {
     margin-top: 20px;
+    display: list-item;
   }
   
   .list-group-item {
