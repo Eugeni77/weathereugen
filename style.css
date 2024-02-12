@@ -1,73 +1,22 @@
-
-
-body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .container-fluid {
-    margin-top: 20px;
-  }
-  
-  .weather-header {
-    background-color: #e2e8ed;
-  }
-  
-  .weather-header h1 {
-    font-size: 2rem;
-  }
-  
-  .form-input {
-    width: 100%; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-  }
-  
-  .search-button {
-    background-color: #007bff;
-    color: #fff;
-    height: 50px; 
-    border-radius: 20%;
-    padding: 10px;
-  }
-  
-  
-  
-  #history {
-    margin-top: 20px;
-  }
-  
-  .list-group-item {
-    cursor: pointer;
-  }
-  
-  #forecast {
+.container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .card img {
-    max-width: 50px;
-    margin: 10px auto;
-  }
-  
-  .card-text {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
+}
+
+.search-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.weather-display-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.weather-card {
+    /* Style for current weather card */
+}
+
+.weather-forecast {
+    /* Style for forecast cards */
+}
+
