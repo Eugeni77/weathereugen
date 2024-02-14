@@ -1,22 +1,38 @@
-.container {
-    display: flex;
-}
+/* style.css */
 
-.search-section {
-    flex: 1;
-    padding: 20px;
-}
-
-.weather-display-section {
-    flex: 2;
-    padding: 20px;
-}
-
-.weather-card {
-    /* Style for current weather card */
-}
-
-.weather-forecast {
-    /* Style for forecast cards */
-}
-
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header styling */
+  .weather-header {
+    background-color: #343a40;
+  }
+  
+  /* Form styling */
+  .form {
+    margin-top: 20px;
+  }
+  
+  .weather-search {
+    width: 80%;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Weather data styling */
+  .weather-details {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* List group styling */
+  #history {
+    margin-top: 20px;
+  }
+  
