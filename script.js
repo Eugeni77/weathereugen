@@ -8,7 +8,8 @@ $(document).ready(function () {
   function createWeatherCard(cityName, weatherItem, index) {
     const iconCode = weatherItem.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
-
+    const utcTimestamp = weatherItem.dt; // Assuming this is the UTC timestamp from the API
+    const localDate = new Date(utcTimestamp * 1000); // Convert to local time
     if (index === 0) {
       // Display real-time date for the main weather card
       const utcTimestamp = weatherItem.dt; // UTC timestamp from weather data
@@ -34,7 +35,7 @@ $(document).ready(function () {
     } else {
       // HTML for the other five-day forecast card
       const date = new Date(weatherItem.dt * 1000);
-      const formattedDate = date.toLocaleDateString("en-US", {
+      const formattedDate = date.toLocaleDateString("en-GB", {
         weekday: "long",
         month: "long",
         day: "numeric",
@@ -79,9 +80,7 @@ $(document).ready(function () {
 
         localStorage.setItem("lastSearchedCity", cityName);
       })
-      .catch(() => {
-        alert("An error occurred while fetching the weather forecast!");
-      });
+      
   }
 
   function getCityCoordinates() {
