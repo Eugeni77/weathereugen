@@ -63,7 +63,9 @@
     background: #9c27b0; /* Purple background */
   }
   
-  .weather-input button {
+  /* Your existing CSS */
+
+.weather-input button {
     width: 100%;
     padding: 10px 0;
     cursor: pointer;
@@ -78,66 +80,26 @@
     background: #4527a0; /* Darker purple on hover */
   }
   
-  .weather-input .location-btn {
-    background: #6C757D;
-  }
-  
-  .weather-input .location-btn:hover {
-    background: #5c636a;
-  }
-  
-  .weather-data {
-    width: 100%;
-  }
-  
-  .weather-data .current-weather {
-    color: #fff;
-    background: #673ab7;
-    border-radius: 5px;
-    padding: 20px 70px 20px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .current-weather h2 {
-    font-weight: 700;
-    font-size: 1.7rem;
-  }
-  
-  .weather-data h6 {
-    margin-top: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-  }
+  /* ... Your existing CSS ... */
+
+
   
   .current-weather .icon {
-    text-align: left; /* Align the icon to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .current-weather .icon img {
     max-width: 120px;
-    margin-top: 50px;
-    margin-left: -769px; /* Adjust the margin to your preference */
-    display: inline-block; 
-}
-
+    margin-bottom: 10px; /* Add some margin below the icon */
+  }
   
   .current-weather .icon h6 {
     margin-top: -10px;
     text-transform: capitalize;
-    display: inline-block; /* Display the description as an inline-block element */
-  margin-left: 10px; /* Add some space between the icon and description */
   }
   
-  .days-forecast h2 {
-    margin: 20px 0;
-    font-size: 1.5rem;
-  }
-  
-  .days-forecast .weather-cards {
-    display: flex;
-    gap: 20px;
-  }
   
   .weather-cards .card:nth-child(odd) {
     background: #4caf50; /* Green background for odd cards */
@@ -147,17 +109,14 @@
     background: #2196f3; /* Blue background for even cards */
   }
   
-  .weather-cards .card h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #fff;
-  }
-  
   .weather-cards .card img {
     max-width: 70px;
     margin: 5px 0 -12px 0;
     filter: brightness(0) invert(1); /* Invert icon colors for better visibility */
   }
+  
+  /* Your existing media queries */
+  
   
   @media (max-width: 1400px) {
     .weather-data .current-weather {

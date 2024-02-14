@@ -29,6 +29,6 @@ The Weather Dashboard is a web application that allows users to check the curren
 - jQuery
 - OpenWeatherMap API
 
-![alt text](<127.0.0.1_5500_index.html (7).png>)
+![alt text](<127.0.0.1_5500_index.html (8).png>)
 
 https://eugeni77.github.io/weathereugen/ 
