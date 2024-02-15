@@ -20,6 +20,7 @@ The Weather Dashboard is a web application that allows users to check the curren
 2. Enter the name of a city in the search input field.
 3. Click the "Search" button or press Enter to fetch the weather information.
 4. View the current weather details and 5-day forecast.
+5.When you click weather dashboard it reloads the website.
 
 ## Technologies Used
 
