@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, Helvetica, cursive;
   }
   
   body {
@@ -44,26 +44,10 @@
     border: 2px solid #673ab7; /* Darker purple border */
   }
   
-  .weather-input .separator {
-    height: 1px;
-    width: 100%;
-    margin: 25px 0;
-    background: #fff; /* White separator background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   
-  .weather-input .separator::before {
-    content: "or";
-    color: #6C757D;
-    font-size: 1.18rem;
-    padding: 0 15px;
-    margin-top: -4px;
-    background: #9c27b0; /* Purple background */
-  }
   
-  /* Your existing CSS */
+  
+  
 
 .weather-input button {
     width: 100%;
@@ -79,8 +63,7 @@
   .weather-input button:hover {
     background: #4527a0; /* Darker purple on hover */
   }
-  
-  /* ... Your existing CSS ... */
+
 
 
   
@@ -108,14 +91,6 @@
   .weather-cards .card:nth-child(even) {
     background: #2196f3; /* Blue background for even cards */
   }
-  
-  .weather-cards .card img {
-    max-width: 70px;
-    margin: 5px 0 -12px 0;
-    filter: brightness(0) invert(1); /* Invert icon colors for better visibility */
-  }
-  
-  /* Your existing media queries */
   
   
   @media (max-width: 1400px) {

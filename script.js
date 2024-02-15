@@ -5,6 +5,14 @@ $(document).ready(function () {
   const cityInput = $(".city-input");
   const searchButton = $(".search-btn");
 
+
+  
+  
+  $("h1").on("click", function () {
+    location.reload(true);
+  });
+
+
   function createWeatherCard(cityName, weatherItem, index) {
     const iconCode = weatherItem.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
@@ -109,3 +117,5 @@ $(document).ready(function () {
   searchButton.click(getCityCoordinates); // Use click() instead of on("click", ...)
   cityInput.keyup((e) => e.key === "Enter" && getCityCoordinates());
 });
+
+
